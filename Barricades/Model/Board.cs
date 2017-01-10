@@ -20,13 +20,6 @@ namespace Barricades.Model
 
 			//creare squares
 
-			//max y = 10 max x = 11
-			//0
-			Squares.Add(new FirstSquare(1, 0));
-			Squares.Add(new FirstSquare(3, 0));
-			Squares.Add(new FirstSquare(7, 0));
-			Squares.Add(new FirstSquare(9, 0));
-
 			//1
 			for(int i = 0; i < 11; i++)
 			{

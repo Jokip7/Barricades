@@ -22,13 +22,9 @@ namespace Barricades.Model
 
 			//max y = 10 max x = 11
 			//0
-			Squares.Add(new FirstSquare(1, 0));
-			Squares.Add(new FirstSquare(3, 0));
-			Squares.Add(new FirstSquare(7, 0));
-			Squares.Add(new FirstSquare(9, 0));
 
 			//1
-			for(int i = 0; i < 11; i++)
+			for (int i = 0; i < 11; i++)
 			{
 				Squares.Add(new Square(i, 1));
 			}
@@ -52,8 +48,9 @@ namespace Barricades.Model
 			Squares.Add(forestSquare);
 			ForestSquare = forestSquare;
 
+
 			//4
-			for(int i = 3; i < 8; i++)
+			for (int i = 3; i < 8; i++)
 			{
 				if (i == 5)
 					Squares.Add(new Rest(i, 4));
@@ -94,6 +91,18 @@ namespace Barricades.Model
 			Finish finishSquare = new Finish(5, 9);
 			Squares.Add(finishSquare);
 			FinishSquare = finishSquare;
+
+			//fill empty spaces
+			for(int x = 0; x < 11; x++)
+			{
+
+				for(int y = 0; y < 10; y++)
+				{
+					if (!coordinateExists(x, y))
+						Squares.Add(new EmptySquare(x, y));
+				}
+
+			}
 
 			// create links
 
@@ -204,6 +213,11 @@ namespace Barricades.Model
                     where sq.x == x && sq.y == y
                     select sq).First();
         }
+
+		private bool coordinateExists(int x, int y)
+		{
+			return findSquare(x, y) != null;
+		}
 
     }
 }

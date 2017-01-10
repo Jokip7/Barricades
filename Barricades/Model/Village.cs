@@ -17,7 +17,9 @@ namespace Barricades.Model
         {
             get
             {
-                return 'v';
+				if(Occupier == null)
+					 return 'v';
+				return Occupier.Character;
             }
         }
     }

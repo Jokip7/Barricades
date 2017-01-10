@@ -20,7 +20,7 @@ namespace Barricades.Model
             {
 				if(Occupier == null)
 					return 'o';
-				return Occupier.
+				return Occupier.Character;
             }
         }
 

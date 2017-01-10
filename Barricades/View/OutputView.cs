@@ -9,7 +9,7 @@ namespace Barricades.View
 {
     class OutputView
     {
-        private const int DELAY = 70;
+        private const int DELAY = 0;
 
         private void printConsoleMessage(string message)
         {

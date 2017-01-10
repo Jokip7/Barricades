@@ -96,7 +96,7 @@ namespace Barricades.Model
 			//8
 			for(int i = 1; i < 10; i++)
 			{
-				Squares.Add(new Square(i, 8));
+				Squares.Add(new Village(i, 8));
 			}
 
 			//9

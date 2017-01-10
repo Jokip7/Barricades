@@ -20,5 +20,11 @@ namespace Barricades.Model
                 return 'r';
             }
         }
-    }
+
+		public override Movable Hit()
+		{
+			return null;
+		}
+
+	}
 }

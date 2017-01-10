@@ -36,9 +36,9 @@ namespace Barricades.Model
             canMoveTo = true;
         }
 
-        public void Hit()
+        public virtual Movable Hit()
         {
-            Occupier.Hit();
+			return Occupier;
         }
 
         public bool isOccupied()

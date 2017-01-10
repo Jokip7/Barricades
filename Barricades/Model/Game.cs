@@ -8,7 +8,7 @@ namespace Barricades.Model
 {
     class Game
     {
-        private Board board;
+        public Board board;
 
         private Dice dice;
 
@@ -27,7 +27,7 @@ namespace Barricades.Model
         public void startGame()
         {
             board.generate();
-            playGame();
+            generatePlayers();
         }
 
         public void generatePlayers()
@@ -35,34 +35,24 @@ namespace Barricades.Model
             players = new List<Player>();
             for (int i = 0; i < NUMBER_OF_PLAYERS; i++)
             {
-                players.Add(new Player(i));
+                players.Add(new Player(i, board.FirstSquares[i]));
+                board.FirstSquares[i].number = i + 1;
             }
-        }
-
-        public void playGame()
-        {
-            while (!gameOver())
-            {
-                playTurn();
-            }
+            playerInTurn = players[0];
         }
 
         public void playTurn()
         {
             switchTurn();
 
-
         }
 
         private void switchTurn()
         {
-            if (playerInTurn == null)
-                playerInTurn = players[0];
-            else
-                playerInTurn = players[playerInTurn.playerNumber + 1 % NUMBER_OF_PLAYERS];
+                playerInTurn = players[playerInTurn.playerNumber + 1 % NUMBER_OF_PLAYERS - 1];
         }
 
-        private bool gameOver()
+        public bool gameOver()
         {
             return board.finishOccupied();
         }

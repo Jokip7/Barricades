@@ -17,7 +17,7 @@ namespace Barricades.Model
         {
             get
             {
-                return 'P';
+                return 'p';
             }
         }
 

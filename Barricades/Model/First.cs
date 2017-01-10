@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace Barricades.Model
 {
-    class Finish : Square
+    class First : Square
     {
-        public Finish(int x, int y) : base(x, y)
-        {
+        public int number { get; set; }
 
+        public First(int x, int y) : base(x, y)
+        {
         }
 
         public override char Character
         {
             get
             {
-                return '=';
+                return char.Parse(number.ToString());
             }
         }
     }

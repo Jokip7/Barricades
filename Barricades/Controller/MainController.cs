@@ -1,4 +1,5 @@
-﻿using Barricades.View;
+﻿using Barricades.Model;
+using Barricades.View;
 
 namespace Barricades.Controller
 {
@@ -7,18 +8,18 @@ namespace Barricades.Controller
         private InputView inputView { get; set; }
 
         private OutputView outputView { get; set; }
-        
+
         private GameController gameController { get; set; }
 
         public MainController()
         {
             inputView = new InputView();
             outputView = new OutputView();
-            gameController = new GameController();
         }
 
         public void startApplication()
         {
+            gameController = new GameController(inputView, outputView);
             outputView.printWelcome();
             gameController.startGame();
         }

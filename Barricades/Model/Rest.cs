@@ -13,11 +13,11 @@ namespace Barricades.Model
 
         }
 
-        public new char Character
+        public override char Character
         {
             get
             {
-                return 'R';
+                return 'r';
             }
         }
     }

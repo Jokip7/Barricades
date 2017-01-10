@@ -10,6 +10,8 @@ namespace Barricades.Model
     {
         public List<Square> Squares { get; set; }
 
+        public List<First> FirstSquares { get; set; }
+
         private Finish FinishSquare { get; set; }
 
         private Forest ForestSquare { get; set; }
@@ -17,6 +19,7 @@ namespace Barricades.Model
         public void generate()
         {
             Squares = new List<Square>();
+            FirstSquares = new List<First>();
 
 			//creare squares
 
@@ -28,7 +31,9 @@ namespace Barricades.Model
 			{
 				if (i == 1 || i == 3 || i == 7 || i == 9)
 				{
-					Squares.Add(new FirstSquare(i, 1));
+                    First newFirstSquare = new First(i, 1);
+					Squares.Add(newFirstSquare);
+                    FirstSquares.Add(newFirstSquare);
 				}
 				else
 				{
@@ -216,11 +221,9 @@ namespace Barricades.Model
 
 		public Square findSquare(int x, int y)
 		{
-
 			return (from sq in Squares
 					where sq.x == x && sq.y == y
 					select sq).FirstOrDefault();
-
 		}
 
 		private bool coordinateExists(int x, int y)

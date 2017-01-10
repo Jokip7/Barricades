@@ -14,11 +14,11 @@ namespace Barricades.Model
 
         public bool canMoveTo { get; set; }
 
-        public char Character
+        public virtual char Character
         {
             get
             {
-                return '.';
+                return 'o';
             }
         }
 

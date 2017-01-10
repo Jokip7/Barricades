@@ -10,6 +10,15 @@ namespace Barricades.Model
 	{
 		public EmptySquare(int x, int y) : base(x, y)
 		{
+            canMoveTo = false;
 		}
-	}
+
+        public override char Character
+        {
+            get
+            {
+                return '.';
+            }
+        }
+    }
 }

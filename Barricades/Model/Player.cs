@@ -11,10 +11,12 @@ namespace Barricades.Model
         private List<Pawn> pawns { get; set; }
 
         public int playerNumber { get; set; }
+        public Square firstSquare { get; set; }
 
-        public Player(int playerNumber)
+        public Player(int playerNumber, Square firstSquare)
         {
             this.playerNumber = playerNumber;
+            this.firstSquare = firstSquare;
         }
 
         public Pawn getPawn(int number)

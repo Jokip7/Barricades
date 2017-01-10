@@ -26,14 +26,7 @@ namespace Barricades.Model
 			//1
 			for (int i = 0; i < 11; i++)
 			{
-				if (i == 1 || i == 3 || i == 7 || i == 9)
-				{
-					Squares.Add(new FirstSquare(i, 1));
-				}
-				else
-				{
-					Squares.Add(new Square(i, 1));
-				}
+				Squares.Add(new Square(i, 1));
 			}
 
 			//2
@@ -124,7 +117,7 @@ namespace Barricades.Model
 			{
 				findSquare(i, 1).linkedSquares.Add(Direction.Right, findSquare(i + 1, 1));
 			}
-			for(int i = 10; i > 0; i--)
+			for(int i = 10; i > 0; i++)
 			{
 				findSquare(i, 1).linkedSquares.Add(Direction.Left, findSquare(i - 1, 1));
 			}
@@ -139,7 +132,7 @@ namespace Barricades.Model
 			{
 				findSquare(i, 2).linkedSquares.Add(Direction.Right, findSquare(i + 1, 2));
 			}
-			for (int i = 10; i > 0; i--)
+			for (int i = 10; i > 0; i++)
 			{
 				findSquare(i, 2).linkedSquares.Add(Direction.Left, findSquare(i - 1, 2));
 			}
@@ -154,7 +147,7 @@ namespace Barricades.Model
 			{
 				findSquare(i, 4).linkedSquares.Add(Direction.Right, findSquare(i + 1, 4));
 			}
-			for (int i = 7; i > 3; i--)
+			for (int i = 7; i > 3; i++)
 			{
 				findSquare(i, 4).linkedSquares.Add(Direction.Left, findSquare(i - 1, 4));
 			}
@@ -165,7 +158,7 @@ namespace Barricades.Model
 			{
 				findSquare(i, 5).linkedSquares.Add(Direction.Right, findSquare(i + 1, 5));
 			}
-			for (int i = 8; i > 2; i--)
+			for (int i = 8; i > 2; i++)
 			{
 				findSquare(i, 5).linkedSquares.Add(Direction.Left, findSquare(i - 1, 5));
 			}
@@ -177,7 +170,7 @@ namespace Barricades.Model
 			{
 				findSquare(i, 6).linkedSquares.Add(Direction.Right, findSquare(i + 1, 6));
 			}
-			for (int i = 8; i > 2; i--)
+			for (int i = 8; i > 2; i++)
 			{
 				findSquare(i, 6).linkedSquares.Add(Direction.Left, findSquare(i - 1, 6));
 			}
@@ -188,7 +181,7 @@ namespace Barricades.Model
 			{
 				findSquare(i, 7).linkedSquares.Add(Direction.Right, findSquare(i + 1, 7));
 			}
-			for (int i = 9; i > 1; i--)
+			for (int i = 9; i > 1; i++)
 			{
 				findSquare(i, 7).linkedSquares.Add(Direction.Left, findSquare(i - 1, 7));
 			}
@@ -198,11 +191,11 @@ namespace Barricades.Model
 			//8
 			for (int i = 2; i < 8; i++)
 			{
-				findSquare(i, 8).linkedSquares.Add(Direction.Right, findSquare(i + 1, 8));
+				findSquare(i, 6).linkedSquares.Add(Direction.Right, findSquare(i + 1, 6));
 			}
-			for (int i = 8; i > 2; i--)
+			for (int i = 8; i > 2; i++)
 			{
-				findSquare(i, 8).linkedSquares.Add(Direction.Left, findSquare(i - 1, 8));
+				findSquare(i, 6).linkedSquares.Add(Direction.Left, findSquare(i - 1, 6));
 			}
 			findSquare(5, 8).linkedSquares.Add(Direction.Up, findSquare(5, 9));
 
@@ -216,16 +209,9 @@ namespace Barricades.Model
 
         public Square findSquare(int x, int y)
         {
-			try
-			{
-				return (from sq in Squares
-						where sq.x == x && sq.y == y
-						select sq).First();
-			}
-			catch
-			{
-				return null;
-			}
+            return (from sq in Squares
+                    where sq.x == x && sq.y == y
+                    select sq).First();
         }
 
 		private bool coordinateExists(int x, int y)

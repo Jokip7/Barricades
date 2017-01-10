@@ -24,7 +24,7 @@ namespace Barricades.Model
 
         public Movable Occupier { get; set; }
 
-        public Dictionary<string, Square> linkedSquares { get; set; }
+        public Dictionary<Direction, Square> linkedSquares { get; set; }
 
         public Square(int x, int y)
         {

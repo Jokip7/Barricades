@@ -4,3 +4,6 @@ c:\users\chris\documents\visual studio 2015\Projects\Barricades\Barricades\bin\D
 c:\users\chris\documents\visual studio 2015\Projects\Barricades\Barricades\obj\Debug\Barricades.csprojResolveAssemblyReference.cache
 c:\users\chris\documents\visual studio 2015\Projects\Barricades\Barricades\obj\Debug\Barricades.exe
 c:\users\chris\documents\visual studio 2015\Projects\Barricades\Barricades\obj\Debug\Barricades.pdb
+C:\Users\Chris\Documents\Avans Hogeschool\Jaar 2\Blok 1\Moduleren 3\Herkansing\Barricades\Barricades\bin\Debug\Barricades.exe.config
+C:\Users\Chris\Documents\Avans Hogeschool\Jaar 2\Blok 1\Moduleren 3\Herkansing\Barricades\Barricades\obj\Debug\Barricades.exe
+C:\Users\Chris\Documents\Avans Hogeschool\Jaar 2\Blok 1\Moduleren 3\Herkansing\Barricades\Barricades\obj\Debug\Barricades.pdb

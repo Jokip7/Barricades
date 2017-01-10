@@ -211,6 +211,12 @@ namespace Barricades.Model
 			}
 			findSquare(5, 8).linkedSquares.Add(Direction.Up, findSquare(5, 9));
 
+			findSquare(3, 5).Occupier = new Barricade();
+			findSquare(7, 5).Occupier = new Barricade();
+			findSquare(4, 6).Occupier = new Barricade();
+			findSquare(6, 6).Occupier = new Barricade();
+			findSquare(5, 7).Occupier = new Barricade();
+			findSquare(5, 8).Occupier = new Barricade();
 
 		}
 

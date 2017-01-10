@@ -214,19 +214,14 @@ namespace Barricades.Model
             return FinishSquare.isOccupied();
         }
 
-        public Square findSquare(int x, int y)
-        {
-			try
-			{
-				return (from sq in Squares
-						where sq.x == x && sq.y == y
-						select sq).First();
-			}
-			catch
-			{
-				return null;
-			}
-        }
+		public Square findSquare(int x, int y)
+		{
+
+			return (from sq in Squares
+					where sq.x == x && sq.y == y
+					select sq).FirstOrDefault();
+
+		}
 
 		private bool coordinateExists(int x, int y)
 		{

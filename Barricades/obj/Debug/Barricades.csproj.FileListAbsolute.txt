@@ -9,3 +9,8 @@ C:\Users\Chris\Documents\Avans Hogeschool\Jaar 2\Blok 1\Moduleren 3\Herkansing\B
 C:\Users\Chris\Documents\Avans Hogeschool\Jaar 2\Blok 1\Moduleren 3\Herkansing\Barricades\Barricades\obj\Debug\Barricades.pdb
 C:\Users\Rick\Documents\AAA huiswerk\MODELEREN\Barricade\Barricades\bin\Debug\Barricades.exe.config
 C:\Users\Rick\Desktop\AAA huiswerk\MODELLEREN\Barikades\Barricades\bin\Debug\Barricades.exe.config
+C:\Users\Rick\Desktop\AAA huiswerk\MODELLEREN\Barikades\Barricades\bin\Debug\Barricades.exe
+C:\Users\Rick\Desktop\AAA huiswerk\MODELLEREN\Barikades\Barricades\bin\Debug\Barricades.pdb
+C:\Users\Rick\Desktop\AAA huiswerk\MODELLEREN\Barikades\Barricades\obj\Debug\Barricades.csprojResolveAssemblyReference.cache
+C:\Users\Rick\Desktop\AAA huiswerk\MODELLEREN\Barikades\Barricades\obj\Debug\Barricades.exe
+C:\Users\Rick\Desktop\AAA huiswerk\MODELLEREN\Barikades\Barricades\obj\Debug\Barricades.pdb

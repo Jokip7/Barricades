@@ -21,25 +21,25 @@ namespace Barricades.Model
             Squares = new List<Square>();
             FirstSquares = new List<First>();
 
-			//creare squares
+            //creare squares
 
-			//max y = 10 max x = 11
-			//0
+            //max y = 10 max x = 11
+            //0
 
-			//1
-			for (int i = 0; i < 11; i++)
-			{
-				if (i == 1 || i == 3 || i == 7 || i == 9)
-				{
+            //1
+            for (int i = 0; i < 11; i++)
+            {
+                if (i == 1 || i == 3 || i == 7 || i == 9)
+                {
                     First newFirstSquare = new First(i, 1);
-					Squares.Add(newFirstSquare);
+                    Squares.Add(newFirstSquare);
                     FirstSquares.Add(newFirstSquare);
-				}
-				else
-				{
-					Squares.Add(new Square(i, 1));
-				}
-			}
+                }
+                else
+                {
+                    Squares.Add(new Square(i, 1));
+                }
+            }
 
 			//2
 			for (int i = 0; i < 11; i++)

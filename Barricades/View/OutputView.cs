@@ -20,12 +20,12 @@ namespace Barricades.View
                 System.Threading.Thread.Sleep(DELAY);
             }
 
-            Console.WriteLine(Environment.NewLine);
+            Console.Write(Environment.NewLine);
         }
 
         public void printWelcome()
         {
-            printConsoleMessage("Welcome to Barricades, player!");
+            Console.WriteLine("> =*=* Welkom bij Barricades, speler! *=*=");
             printConsoleMessage("Placeholder informatie voor het spel.");
             printConsoleMessage("Druk op een knop om een spel te beginnen.");
             Console.ReadKey();
@@ -33,27 +33,14 @@ namespace Barricades.View
 
         public void printInputError()
         {
-            printConsoleMessage("Input not recognized.");
+            printConsoleMessage("Input niet herkend.");
         }
 
         public void printBoard(List<Square> squares)
         {
-            //string boardString = "";
-            //int yPos = 0;
-            //foreach (var square in squares)
-            //{
-            //    if (square.y > yPos)
-            //    {
-            //        boardString += Environment.NewLine;
-            //        yPos++;
-            //    }
-            //    boardString += square.Character;
-            //}
-            //Console.WriteLine(boardString);
-
-			for(int y = 9; y > -1; y--)
+            Console.Clear();
+			for(int y = 9; y >= 0; y--)
 			{
-
 				String line = "";
 				for(int x = 10; x > -1; x--)
 				{
@@ -64,6 +51,31 @@ namespace Barricades.View
 				Console.WriteLine(line);
 			}
 
+        }
+
+        public void printDice(int eyes)
+        {
+            printConsoleMessage("Je gooit " + eyes);
+        }
+
+        public void printPawnRequest(int playerNumber)
+        {
+            printConsoleMessage("Welke pion wil je verplaatsen, speler " + playerNumber + "?");
+        }
+
+        public void printDirectionRequest()
+        {
+            printConsoleMessage("Welke kant wil je op?");
+        }
+
+        public void printEmptyLine()
+        {
+            Console.WriteLine(Environment.NewLine);
+        }
+
+        public void printDeployError()
+        {
+            printConsoleMessage("Je kan deze pion niet neerzetten");
         }
     }
 }

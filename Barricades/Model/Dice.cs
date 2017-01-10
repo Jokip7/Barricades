@@ -19,7 +19,7 @@ namespace Barricades.Model
 
         public int throwDice()
         {
-            return random.Next(LOWEST_EYE, HIGHEST_EYE - 1);
+            return random.Next(LOWEST_EYE, HIGHEST_EYE + 1);
         }
     }
 }

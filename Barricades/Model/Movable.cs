@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Barricades.Model
 {
-    interface Movable 
+    interface Movable : Printable
     {
-        void Move();
+        bool Move(Direction direction);
 
         void Hit();
 

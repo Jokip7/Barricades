@@ -10,11 +10,11 @@ namespace Barricades.Model
     {
         public Board board;
 
-        private Dice dice;
+        public Dice dice;
 
         private List<Player> players;
 
-        private Player playerInTurn;
+        public Player playerInTurn;
 
         private const int NUMBER_OF_PLAYERS = 4;
 
@@ -41,13 +41,7 @@ namespace Barricades.Model
             playerInTurn = players[0];
         }
 
-        public void playTurn()
-        {
-            switchTurn();
-
-        }
-
-        private void switchTurn()
+        public void switchTurn()
         {
                 playerInTurn = players[playerInTurn.playerNumber + 1 % NUMBER_OF_PLAYERS - 1];
         }

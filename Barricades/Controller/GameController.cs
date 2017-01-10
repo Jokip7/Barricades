@@ -16,10 +16,13 @@ namespace Barricades.Controller
 
         private OutputView outputView { get; set; }
 
+        private PawnController pawnController { get; set; }
+
         public GameController(InputView inputView, OutputView outputView)
         {
             this.inputView = inputView;
             this.outputView = outputView;
+            this.pawnController = new PawnController(inputView, outputView);
         }
 
         public void startGame()
@@ -33,9 +36,11 @@ namespace Barricades.Controller
         {
             while (!game.gameOver())
             {
-                game.playTurn();
                 outputView.printBoard(game.board.Squares);
-                Console.ReadKey();
+                int diceThrow = game.dice.throwDice();
+                outputView.printDice(diceThrow);
+                pawnController.movePawn(game.playerInTurn, diceThrow);
+                game.switchTurn();
             }
         }
     }

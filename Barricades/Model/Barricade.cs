@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Barricades.Model
 {
-    class Barricade : Movable, Printable
+    class Barricade : Movable
     {
         public char Character
         {
@@ -26,10 +26,9 @@ namespace Barricades.Model
             throw new NotImplementedException();
         }
 
-        public void Move()
+        public bool Move(Direction direction)
         {
             throw new NotImplementedException();
         }
-
     }
 }

@@ -18,7 +18,10 @@ namespace Barricades.Model
         {
             get
             {
-                return 'o';
+                if (!isOccupied())
+                    return 'o';
+                else
+                    return Occupier.Character;
             }
         }
 
@@ -37,6 +40,11 @@ namespace Barricades.Model
         public void Hit()
         {
             Occupier.Hit();
+        }
+
+        public Square getLinkedSquare(Direction direction)
+        {
+            return (from sq in linkedSquares where sq.Key == direction select sq).FirstOrDefault().Value;
         }
 
         public bool isOccupied()

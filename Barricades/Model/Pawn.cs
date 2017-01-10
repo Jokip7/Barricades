@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Barricades.Model
 {
-    class Pawn : Movable, Printable 
+    class Pawn : Movable
     {
         public Square location
         {
@@ -21,9 +21,14 @@ namespace Barricades.Model
             }
         }
 
-        public void Move()
+        public bool Move(Direction direction)
         {
-            //Move this pawn
+            var nextSquare = location.getLinkedSquare(direction);
+            if (nextSquare == null || !nextSquare.canMoveTo)
+                return false;
+            location.Occupier = null;
+            nextSquare.Occupier = this;
+            return true;
         }
 
         public void Hit()

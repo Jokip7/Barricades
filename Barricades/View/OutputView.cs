@@ -38,18 +38,32 @@ namespace Barricades.View
 
         public void printBoard(List<Square> squares)
         {
-            string boardString = "";
-            int yPos = 0;
-            foreach (var square in squares)
-            {
-                if (square.y > yPos)
-                {
-                    boardString += Environment.NewLine;
-                    yPos++;
-                }
-                boardString += square.Character;
-            }
-            Console.WriteLine(boardString);
+            //string boardString = "";
+            //int yPos = 0;
+            //foreach (var square in squares)
+            //{
+            //    if (square.y > yPos)
+            //    {
+            //        boardString += Environment.NewLine;
+            //        yPos++;
+            //    }
+            //    boardString += square.Character;
+            //}
+            //Console.WriteLine(boardString);
+
+			for(int y = 9; y > -1; y--)
+			{
+
+				String line = "";
+				for(int x = 10; x > -1; x--)
+				{
+					line += (from sq in squares
+							 where sq.x == x && sq.y == y
+							 select sq).FirstOrDefault().Character;
+				}
+				Console.WriteLine(line);
+			}
+
         }
     }
 }

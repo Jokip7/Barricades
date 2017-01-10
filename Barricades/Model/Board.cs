@@ -18,6 +18,8 @@ namespace Barricades.Model
         {
             Squares = new List<Square>();
 
+			//creare squares
+
 			//max y = 10 max x = 11
 			//0
 			Squares.Add(new FirstSquare(1, 0));
@@ -89,9 +91,104 @@ namespace Barricades.Model
 			//9
 			Squares.Add(new Finish(5, 9));
 
+			// create links
+
+			//0
+			findSquare(1, 0).linkedSquares.Add(Direction.Up, findSquare(1, 1));
+			findSquare(3, 0).linkedSquares.Add(Direction.Up, findSquare(3, 1));
+			findSquare(7, 0).linkedSquares.Add(Direction.Up, findSquare(7, 1));
+			findSquare(9, 0).linkedSquares.Add(Direction.Up, findSquare(9, 1));
+
+			//1
+			for(int i = 0; i < 10; i++)
+			{
+				findSquare(i, 1).linkedSquares.Add(Direction.Right, findSquare(i + 1, 1));
+			}
+			for(int i = 10; i > 0; i++)
+			{
+				findSquare(i, 1).linkedSquares.Add(Direction.Left, findSquare(i - 1, 1));
+			}
+			findSquare(0, 1).linkedSquares.Add(Direction.Up, findSquare(0, 2));
+			findSquare(2, 1).linkedSquares.Add(Direction.Up, findSquare(2, 2));
+			findSquare(5, 1).linkedSquares.Add(Direction.Up, findSquare(5, 2));
+			findSquare(8, 1).linkedSquares.Add(Direction.Up, findSquare(8, 2));
+			findSquare(10, 1).linkedSquares.Add(Direction.Up, findSquare(10, 2));
+
+			//2
+			for (int i = 0; i < 10; i++)
+			{
+				findSquare(i, 2).linkedSquares.Add(Direction.Right, findSquare(i + 1, 2));
+			}
+			for (int i = 10; i > 0; i++)
+			{
+				findSquare(i, 2).linkedSquares.Add(Direction.Left, findSquare(i - 1, 2));
+			}
+			findSquare(3, 2).linkedSquares.Add(Direction.Up, findSquare(3, 4));
+			findSquare(7, 2).linkedSquares.Add(Direction.Up, findSquare(7, 4));
+
+			//3
+			findSquare(5, 3).linkedSquares.Add(Direction.Up, findSquare(5, 4));
+
+			//4
+			for (int i = 3; i < 7; i++)
+			{
+				findSquare(i, 4).linkedSquares.Add(Direction.Right, findSquare(i + 1, 4));
+			}
+			for (int i = 7; i > 3; i++)
+			{
+				findSquare(i, 4).linkedSquares.Add(Direction.Left, findSquare(i - 1, 4));
+			}
+			findSquare(5, 4).linkedSquares.Add(Direction.Up, findSquare(5, 5));
+
+			//5
+			for (int i = 2; i < 8; i++)
+			{
+				findSquare(i, 5).linkedSquares.Add(Direction.Right, findSquare(i + 1, 5));
+			}
+			for (int i = 8; i > 2; i++)
+			{
+				findSquare(i, 5).linkedSquares.Add(Direction.Left, findSquare(i - 1, 5));
+			}
+			findSquare(2, 5).linkedSquares.Add(Direction.Up, findSquare(2, 6));
+			findSquare(8, 5).linkedSquares.Add(Direction.Up, findSquare(8, 6));
+
+			//6
+			for (int i = 2; i < 8; i++)
+			{
+				findSquare(i, 6).linkedSquares.Add(Direction.Right, findSquare(i + 1, 6));
+			}
+			for (int i = 8; i > 2; i++)
+			{
+				findSquare(i, 6).linkedSquares.Add(Direction.Left, findSquare(i - 1, 6));
+			}
+			findSquare(5, 6).linkedSquares.Add(Direction.Up, findSquare(5, 7));
+
+			//7
+			for (int i = 1; i < 9; i++)
+			{
+				findSquare(i, 7).linkedSquares.Add(Direction.Right, findSquare(i + 1, 7));
+			}
+			for (int i = 9; i > 1; i++)
+			{
+				findSquare(i, 7).linkedSquares.Add(Direction.Left, findSquare(i - 1, 7));
+			}
+			findSquare(1, 7).linkedSquares.Add(Direction.Up, findSquare(1, 8));
+			findSquare(9, 7).linkedSquares.Add(Direction.Up, findSquare(9, 8));
+
+			//8
+			for (int i = 2; i < 8; i++)
+			{
+				findSquare(i, 6).linkedSquares.Add(Direction.Right, findSquare(i + 1, 6));
+			}
+			for (int i = 8; i > 2; i++)
+			{
+				findSquare(i, 6).linkedSquares.Add(Direction.Left, findSquare(i - 1, 6));
+			}
+			findSquare(5, 8).linkedSquares.Add(Direction.Up, findSquare(5, 9));
+
 		}
 
-        public bool finishOccupied()
+		public bool finishOccupied()
         {
             return FinishSquare.isOccupied();
         }

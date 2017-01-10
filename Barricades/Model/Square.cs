@@ -28,6 +28,7 @@ namespace Barricades.Model
 
         public Square(int x, int y)
         {
+			linkedSquares = new Dictionary<Direction, Square>();
             this.x = x;
             this.y = y;
             canMoveTo = true;

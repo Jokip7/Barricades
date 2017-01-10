@@ -1,0 +1,6 @@
+c:\users\chris\documents\visual studio 2015\Projects\Barricades\Barricades\bin\Debug\Barricades.exe.config
+c:\users\chris\documents\visual studio 2015\Projects\Barricades\Barricades\bin\Debug\Barricades.exe
+c:\users\chris\documents\visual studio 2015\Projects\Barricades\Barricades\bin\Debug\Barricades.pdb
+c:\users\chris\documents\visual studio 2015\Projects\Barricades\Barricades\obj\Debug\Barricades.csprojResolveAssemblyReference.cache
+c:\users\chris\documents\visual studio 2015\Projects\Barricades\Barricades\obj\Debug\Barricades.exe
+c:\users\chris\documents\visual studio 2015\Projects\Barricades\Barricades\obj\Debug\Barricades.pdb

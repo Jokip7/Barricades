@@ -50,6 +50,7 @@
     <Compile Include="Model\Dice.cs" />
     <Compile Include="Model\Direction.cs" />
     <Compile Include="Model\Finish.cs" />
+    <Compile Include="Model\FirstSquare.cs" />
     <Compile Include="Model\Forest.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Model\Movable.cs" />

@@ -7,3 +7,4 @@ c:\users\chris\documents\visual studio 2015\Projects\Barricades\Barricades\obj\D
 C:\Users\Chris\Documents\Avans Hogeschool\Jaar 2\Blok 1\Moduleren 3\Herkansing\Barricades\Barricades\bin\Debug\Barricades.exe.config
 C:\Users\Chris\Documents\Avans Hogeschool\Jaar 2\Blok 1\Moduleren 3\Herkansing\Barricades\Barricades\obj\Debug\Barricades.exe
 C:\Users\Chris\Documents\Avans Hogeschool\Jaar 2\Blok 1\Moduleren 3\Herkansing\Barricades\Barricades\obj\Debug\Barricades.pdb
+C:\Users\Rick\Documents\AAA huiswerk\MODELEREN\Barricade\Barricades\bin\Debug\Barricades.exe.config

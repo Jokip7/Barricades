@@ -21,7 +21,7 @@ namespace Barricades.Model
 			//creare squares
 
 			//1
-			for(int i = 0; i < 11; i++)
+			for (int i = 0; i < 11; i++)
 			{
 				Squares.Add(new Square(i, 1));
 			}
@@ -45,8 +45,9 @@ namespace Barricades.Model
 			Squares.Add(forestSquare);
 			ForestSquare = forestSquare;
 
+
 			//4
-			for(int i = 3; i < 8; i++)
+			for (int i = 3; i < 8; i++)
 			{
 				if (i == 5)
 					Squares.Add(new Rest(i, 4));
@@ -87,6 +88,18 @@ namespace Barricades.Model
 			Finish finishSquare = new Finish(5, 9);
 			Squares.Add(finishSquare);
 			FinishSquare = finishSquare;
+
+			//fill empty spaces
+			for(int x = 0; x < 11; x++)
+			{
+
+				for(int y = 0; y < 10; y++)
+				{
+					if (!coordinateExists(x, y))
+						Squares.Add(new EmptySquare(x, y));
+				}
+
+			}
 
 			// create links
 
@@ -193,10 +206,16 @@ namespace Barricades.Model
 
         public Square findSquare(int x, int y)
         {
-            return (from sq in Squares
-                    where sq.x == x && sq.y == y
-                    select sq).First();
+            var square = (from sq in Squares
+                          where sq.x == x && sq.y == y
+                          select sq).FirstOrDefault();
+            return square;
         }
+
+		private bool coordinateExists(int x, int y)
+		{
+			return findSquare(x, y) != null;
+		}
 
     }
 }

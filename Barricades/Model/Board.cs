@@ -48,7 +48,9 @@ namespace Barricades.Model
 			}
 
 			//3
-			Squares.Add(new Forest(5, 3));
+			Forest forestSquare = new Forest(5, 3);
+			Squares.Add(forestSquare);
+			ForestSquare = forestSquare;
 
 			//4
 			for(int i = 3; i < 8; i++)
@@ -89,7 +91,9 @@ namespace Barricades.Model
 			}
 
 			//9
-			Squares.Add(new Finish(5, 9));
+			Finish finishSquare = new Finish(5, 9);
+			Squares.Add(finishSquare);
+			FinishSquare = finishSquare;
 
 			// create links
 
@@ -185,6 +189,7 @@ namespace Barricades.Model
 				findSquare(i, 6).linkedSquares.Add(Direction.Left, findSquare(i - 1, 6));
 			}
 			findSquare(5, 8).linkedSquares.Add(Direction.Up, findSquare(5, 9));
+
 
 		}
 
